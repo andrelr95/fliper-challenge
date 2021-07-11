@@ -9,7 +9,8 @@ import Button from 'components/Buttons';
 import { GET_WEALTH_SUMMARY } from 'services/WealthSummary/queries';
 import { WealthSummaryData } from 'services/WealthSummary/types';
 
-import { Wrapper } from './styles';
+import Text from 'components/Text';
+import { InvestedMoneyText, Wrapper } from './styles';
 
 const Home = () => {
   const { loading, data, error } =
@@ -38,7 +39,6 @@ const Home = () => {
           padding: 24px;
           border-radius: 14px;
           box-shadow: 1px 1px 1px #9aa3bc;
-          border: 1px solid #9aa3bc;
           background-color: #fff;
         `}
       >
@@ -50,7 +50,9 @@ const Home = () => {
             justify-content: space-between;
           `}
         >
-          <span>Seu resumo</span>
+          <Text color="darkBlue" type="xbold25">
+            Seu resumo
+          </Text>
           <Icon name="options" />
         </div>
         <div
@@ -63,7 +65,6 @@ const Home = () => {
             css={`
               display: flex;
               flex-direction: column;
-              padding: 16px 0 0;
               width: 100%;
             `}
           >
@@ -72,52 +73,79 @@ const Home = () => {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 16px 0;
               `}
             >
-              <span>Valor investido</span>
-              <span>R$ 3.200.876,00</span>
+              <InvestedMoneyText color="darkGray" type="medium16">
+                Valor investido
+              </InvestedMoneyText>
+              <Text color="darkBlue" type="xbold22">
+                R$ 3.200.876,00
+              </Text>
             </div>
             <div
               css={`
                 display: flex;
                 flex-direction: column;
+                padding: 16px 0;
               `}
             >
               <div
                 css={`
                   display: flex;
                   justify-content: space-between;
+                  align-items: center;
+                  height: 24px;
+                  margin: 4px 0;
                 `}
               >
-                <span>Rentabilidade/mes</span>
-                <span>2,767%</span>
+                <Text color="darkGray" type="medium16">
+                  Rentabilidade/mês
+                </Text>
+                <Text color="darkBlue" type="xbold18">
+                  2,767%
+                </Text>
               </div>
               <div
                 css={`
                   display: flex;
                   justify-content: space-between;
+                  align-items: center;
+                  height: 24px;
+                  margin: 4px 0;
                 `}
               >
-                <span>CDI</span>
-                <span>3,45%</span>
+                <Text color="darkGray" type="medium16">
+                  CDI
+                </Text>
+                <Text color="darkBlue" type="xbold18">
+                  3,45%
+                </Text>
               </div>
               <div
                 css={`
                   display: flex;
                   justify-content: space-between;
+                  align-items: center;
+                  height: 24px;
+                  margin: 4px 0;
                 `}
               >
-                <span>Ganho/mês</span>
-                <span>R$ 1833,23</span>
+                <Text color="darkGray" type="medium16">
+                  Ganho/mês
+                </Text>
+                <Text color="darkBlue" type="xbold18">
+                  R$ 1833,23
+                </Text>
               </div>
             </div>
           </div>
         </div>
         <hr
           css={`
-            background-color: #9aa3bc;
+            border-top: 0.5px solid #9aa3bc;
             color: #9aa3bc;
-            margin: 16px 0;
+            margin: 8px 0;
           `}
         />
         <div
@@ -125,10 +153,13 @@ const Home = () => {
           css={`
             display: flex;
             justify-content: flex-end;
+            padding-top: 16px;
           `}
         >
           <Button color="primary" type="button">
-            Ver Mais
+            <Text type="bold16" color="darkBlue">
+              ver mais
+            </Text>
           </Button>
         </div>
       </div>

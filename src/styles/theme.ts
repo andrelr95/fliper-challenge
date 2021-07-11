@@ -21,22 +21,36 @@ export const shadowColors = {
   light: '1px 1px 1px rgba(0, 0, 0, 0.16)',
 };
 
-const genericFontType = {
-  fontFamily: 'Open Sans',
-};
-
 export const fontTypes = {
-  heading1: {
-    ...genericFontType,
-    fontSize: 92,
-    letterSpacing: 0,
-    lineHeight: '125px',
+  medium16: {
+    fontFamily: 'Milliard Medium',
+    fontSize: '16px',
+    letterSpacing: '0.48px',
+    lineHeight: '20px',
   },
-  heading2: {
-    ...genericFontType,
-    fontSize: 56,
-    letterSpacing: 1,
-    lineHeight: '76px',
+  bold16: {
+    fontFamily: 'Metropolis Bold',
+    fontSize: '16px',
+    letterSpacing: '0.48px',
+    lineHeight: '20px',
+  },
+  xbold18: {
+    fontFamily: 'Metropolis Extra Bold',
+    fontSize: '18px',
+    letterSpacing: '0.54px',
+    lineHeight: '22px',
+  },
+  xbold22: {
+    fontFamily: 'Metropolis Extra Bold',
+    fontSize: '22px',
+    letterSpacing: '0.66px',
+    lineHeight: '30px',
+  },
+  xbold25: {
+    fontFamily: 'Metropolis Extra Bold',
+    fontSize: '25px',
+    letterSpacing: '0.75px',
+    lineHeight: '30px',
   },
 };
 

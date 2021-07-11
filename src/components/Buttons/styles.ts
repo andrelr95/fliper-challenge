@@ -6,6 +6,15 @@ export const StyledButton = styled.button`
   box-shadow: ${({ theme }) => theme.shadows.light};
   padding: 8px 16px;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 40px;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.grayBlue2};
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translate(1px, 1px);
+  }
 `;
