@@ -1,8 +1,10 @@
-interface WealthSummary {
+export interface WealthSummary {
   id: number;
-  model: string;
-  year: number;
-  stock: number;
+  total: number;
+  profitability: number;
+  hasHistory: boolean;
+  gain: number;
+  cdi: number;
 }
 
 export interface WealthSummaryData {

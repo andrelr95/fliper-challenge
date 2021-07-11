@@ -19,6 +19,7 @@ export const themeColors = {
 
 export const shadowColors = {
   light: '1px 1px 1px rgba(0, 0, 0, 0.16)',
+  dark: '1px 1px 1px #9AA3BC',
 };
 
 export const fontTypes = {

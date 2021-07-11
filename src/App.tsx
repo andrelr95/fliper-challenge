@@ -1,4 +1,5 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { ApolloProvider } from '@apollo/client';
 import { HashRouter, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
@@ -13,24 +14,28 @@ import GlobalStyle from 'styles/global';
 
 import DefaultRoute from 'routes';
 
+import { store } from './store';
+
 const App: React.FC = () => {
   return (
-    <ApolloProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <HashRouter>
-          <GlobalStyle />
-          <Switch>
-            <DefaultRoute path="/" exact component={Home} title="Dashboard" />
-            <DefaultRoute
-              path="/details"
-              exact
-              component={Details}
-              title="Detalhes"
-            />
-          </Switch>
-        </HashRouter>
-      </ThemeProvider>
-    </ApolloProvider>
+    <Provider store={store}>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme}>
+          <HashRouter>
+            <GlobalStyle />
+            <Switch>
+              <DefaultRoute path="/" exact component={Home} title="Dashboard" />
+              <DefaultRoute
+                path="/details"
+                exact
+                component={Details}
+                title="Detalhes"
+              />
+            </Switch>
+          </HashRouter>
+        </ThemeProvider>
+      </ApolloProvider>
+    </Provider>
   );
 };
 
