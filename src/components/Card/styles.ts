@@ -33,11 +33,11 @@ export const CardFooter = styled.div.attrs(() => ({
 }))`
   display: flex;
   justify-content: flex-end;
-  padding-top: 16px;
+  padding-top: 8px;
 `;
 
 export const Divisor = styled.hr`
-  border-top: 0.5px solid ${({ theme }) => theme.colors.darkGray};
+  border-top: 0.5px solid ${({ theme }) => theme.colors.grayBlue};
   color: #9aa3bc;
   margin: 8px 0;
 `;

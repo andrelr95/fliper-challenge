@@ -6,11 +6,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color: 'primary' | 'secondary';
   outline?: boolean;
 }
-const Button: React.FC<ButtonProps> = ({ children }) => {
-  return (
-    // eslint-disable-next-line no-console
-    <StyledButton onClick={() => console.log('click')}>{children}</StyledButton>
-  );
+const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
+  return <StyledButton onClick={rest.onClick}>{children}</StyledButton>;
 };
 
 export default Button;

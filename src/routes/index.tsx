@@ -1,7 +1,8 @@
+import Text from 'components/Text';
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { MainContent, ContentWrapper } from './styles';
+import { MainContent, ContentWrapper, TitleWrapper } from './styles';
 
 interface DefaultRouteProps {
   path: string;
@@ -17,7 +18,11 @@ const DefaultRoute = ({
 }: DefaultRouteProps) => {
   return (
     <MainContent>
-      <h1>{title}</h1>
+      <TitleWrapper>
+        <Text color="darkBlue" type="xbold25">
+          {title}
+        </Text>
+      </TitleWrapper>
       <ContentWrapper>
         <Route exact={exact} component={component} path={path} />
       </ContentWrapper>

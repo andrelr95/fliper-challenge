@@ -4,13 +4,18 @@ import { useQuery } from '@apollo/client';
 import 'styled-components/macro';
 
 import Card from 'components/Card';
-import Button from 'components/Buttons';
+import Button from 'components/Button';
 
 import { GET_WEALTH_SUMMARY } from 'services/WealthSummary/queries';
 import { WealthSummary, WealthSummaryData } from 'services/WealthSummary/types';
 
 import Text from 'components/Text';
 import Icon from 'components/Icon';
+import {
+  formatNumberToCurrencyString,
+  formatNumberToPercentage,
+} from 'helpers';
+
 import * as S from './styles';
 
 const Home = () => {
@@ -58,20 +63,28 @@ const Home = () => {
           <S.Content>
             <S.InvestedMoneyWrapper>
               <S.InvestedMoneyLabel>Valor investido</S.InvestedMoneyLabel>
-              <S.InvestedMoneyValue>{wealthSummary.total}</S.InvestedMoneyValue>
+              <S.InvestedMoneyValue>
+                {formatNumberToCurrencyString(wealthSummary.total)}
+              </S.InvestedMoneyValue>
             </S.InvestedMoneyWrapper>
             <S.DetailsWrapper>
               <S.Detail>
                 <S.DetailLabel>Rentabilidade/mês</S.DetailLabel>
-                <S.DetailValue>{wealthSummary.profitability}%</S.DetailValue>
+                <S.DetailValue>
+                  {formatNumberToPercentage(wealthSummary.profitability, 3)}
+                </S.DetailValue>
               </S.Detail>
               <S.Detail>
                 <S.DetailLabel>CDI</S.DetailLabel>
-                <S.DetailValue>{wealthSummary.cdi}%</S.DetailValue>
+                <S.DetailValue>
+                  {formatNumberToPercentage(wealthSummary.cdi, 2)}
+                </S.DetailValue>
               </S.Detail>
               <S.Detail>
                 <S.DetailLabel>Ganho/mês</S.DetailLabel>
-                <S.DetailValue>{wealthSummary.gain}</S.DetailValue>
+                <S.DetailValue>
+                  {formatNumberToCurrencyString(wealthSummary.gain)}
+                </S.DetailValue>
               </S.Detail>
             </S.DetailsWrapper>
           </S.Content>

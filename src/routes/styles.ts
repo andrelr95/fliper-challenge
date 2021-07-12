@@ -11,3 +11,7 @@ export const ContentWrapper = styled.div`
   margin: 14px;
   height: 100%;
 `;
+
+export const TitleWrapper = styled.div`
+  padding: 16px;
+`;
