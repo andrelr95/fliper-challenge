@@ -11,6 +11,8 @@ declare module 'styled-components' {
 
 export const themeColors = {
   white: '#FFF',
+  gray1: '#e3e3e3',
+  gray2: '#d6d6d6',
   grayBlue: '#9AA3BC',
   grayBlue2: '#E8EBF6',
   darkGray: '#606377',

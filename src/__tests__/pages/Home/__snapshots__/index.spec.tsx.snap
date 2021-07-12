@@ -3,5 +3,93 @@
 exports[`Home Renders correctly 1`] = `
 <div
   className="sc-iCoGMd ewpiJz"
-/>
+>
+  <div
+    className="sc-bdnxRM kigoMP"
+    id="card"
+  >
+    <div
+      data-testid="card-loading-skeleton"
+    >
+      <div
+        className="css-1521o73-SkeletonTheme"
+      >
+        <span>
+          <span
+            className="react-loading-skeleton Loading___StyledSkeleton-sc-bxkw17-0 BAJYD css-1eg0sfo-skeletonStyles-Skeleton"
+            style={
+              Object {
+                "height": 30,
+                "width": "100%",
+              }
+            }
+          >
+            ‌
+          </span>
+        </span>
+        <span>
+          <span
+            className="react-loading-skeleton Loading___StyledSkeleton2-sc-bxkw17-1 fwWcuw css-1eg0sfo-skeletonStyles-Skeleton"
+            style={
+              Object {
+                "height": 90,
+                "width": "100%",
+              }
+            }
+          >
+            ‌
+          </span>
+        </span>
+        <span>
+          <span
+            className="react-loading-skeleton Loading___StyledSkeleton3-sc-bxkw17-2 clrdvF css-1eg0sfo-skeletonStyles-Skeleton"
+            style={
+              Object {
+                "height": 24,
+                "width": "100%",
+              }
+            }
+          >
+            ‌
+          </span>
+          <span
+            className="react-loading-skeleton Loading___StyledSkeleton3-sc-bxkw17-2 clrdvF css-1eg0sfo-skeletonStyles-Skeleton"
+            style={
+              Object {
+                "height": 24,
+                "width": "100%",
+              }
+            }
+          >
+            ‌
+          </span>
+          <span
+            className="react-loading-skeleton Loading___StyledSkeleton3-sc-bxkw17-2 clrdvF css-1eg0sfo-skeletonStyles-Skeleton"
+            style={
+              Object {
+                "height": 24,
+                "width": "100%",
+              }
+            }
+          >
+            ‌
+          </span>
+        </span>
+        <span>
+          <span
+            className="react-loading-skeleton Loading___StyledSkeleton4-sc-bxkw17-3 dGKXdM css-1eg0sfo-skeletonStyles-Skeleton"
+            style={
+              Object {
+                "height": 60,
+                "width": "100%",
+              }
+            }
+          >
+            ‌
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 `;

@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import wealthSummary from './modules/WealthSummary/wealth-summary.store';
+import wealthSummary from './modules/WealthSummary/index.store';
 
 export const store = configureStore({
   reducer: {

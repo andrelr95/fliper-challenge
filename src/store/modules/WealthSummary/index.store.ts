@@ -1,22 +1,17 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-export interface WealthSummaryState {
-  id: number;
-  total: number;
-  profitability: number;
-  hasHistory: boolean;
-  gain: number;
-  cdi: number;
-}
+import { WealthSummaryState } from './types.store';
 
 const INITIAL_STATE: WealthSummaryState = {
-  cdi: 0,
-  gain: 0,
-  hasHistory: false,
-  id: 0,
-  profitability: 0,
-  total: 0,
+  payload: {
+    cdi: 0,
+    gain: 0,
+    hasHistory: false,
+    id: 0,
+    profitability: 0,
+    total: 0,
+  },
+  loading: 'idle',
 };
 
 export const wealthSummarySlice = createSlice({
